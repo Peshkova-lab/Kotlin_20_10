@@ -1,0 +1,169 @@
+<https://kotlinlang.org/>
+
+<https://kotlinlang.org/>Play <https://play.kotlinlang.org/>
+
+  * Solutions
+      o Multiplatform Mobile <https://kotlinlang.org/lp/mobile/>
+      o Server-side <https://kotlinlang.org/lp/server-side/>
+      o Web frontend <https://kotlinlang.org/docs/js-overview.html>
+      o Data science
+        <https://kotlinlang.org/docs/data-science-overview.html>
+      o Android <https://kotlinlang.org/docs/android-overview.html>
+  * Docs <https://kotlinlang.org/docs/home.html>
+  * Community <https://kotlinlang.org/community/>
+  * Teach <https://kotlinlang.org/education/>
+  * Play
+
+SolutionsMultiplatform Mobile
+<https://kotlinlang.org/lp/mobile/>Server-side
+<https://kotlinlang.org/lp/server-side/>Web frontend
+<https://kotlinlang.org/docs/js-overview.html>Data science
+<https://kotlinlang.org/docs/data-science-overview.html>Android
+<https://kotlinlang.org/docs/android-overview.html>Docs
+<https://kotlinlang.org/docs/home.html>Community
+<https://kotlinlang.org/community/>Teach
+<https://kotlinlang.org/education/>Play <https://play.kotlinlang.org/>
+
+Play <https://play.kotlinlang.org/>
+Playground
+
+Playground <https://play.kotlinlang.org/>Hands-on
+<https://play.kotlinlang.org/hands-on>Examples
+<https://play.kotlinlang.org/byExample>Koans
+<https://play.kotlinlang.org/koans>
+Hands-on <https://play.kotlinlang.org/hands-on>Examples
+<https://play.kotlinlang.org/byExample>Koans
+<https://play.kotlinlang.org/koans>
+
+|fun main() { var students: MutableList<Student> = mutableListOf(); val
+student = Student(1, "name", "lastname", 208, "IT");
+student.accept(students); val student_1 = Student(2, "name_2",
+"lastname_2", 208, "IT"); student_1.accept(students);
+student_1.accept(students); println(students);
+student_1.delete(students); println(students); } class Student(val
+id:Int, var name: String, var lastname: String, var group: Int, var
+facultet: String) { fun accept (students: MutableList<Student>) { var
+check: Boolean = true; for (student in students) { if (student.id ==
+this.id) { check = false; } } if (check) { students.add(this) println
+("Success!") } else println("This student exists!"); } fun
+delete(students: MutableList<Student>) { var check: Boolean = false; for
+(student in students) { if (student.id == this.id) { check = true; } }
+if (check) { students.remove(this); println ("Success!"); } } } |
+
+xxxxxxxxxx
+
+ 
+
+fun main() {
+
+    
+
+    var students: MutableList<Student> = mutableListOf();
+
+    
+
+    val student = Student(1, "name", "lastname", 208, "IT");
+
+  
+
+    student.accept(students);
+
+    
+
+    val student_1 = Student(2, "name_2", "lastname_2", 208, "IT");
+
+    
+
+    student_1.accept(students);
+
+    student_1.accept(students);
+
+    
+
+    println(students);
+
+    
+
+    student_1.delete(students);
+
+    
+
+    println(students);
+
+   
+
+}
+
+​
+
+class Student(val id:Int, var name: String, var lastname: String, var group: Int, var facultet: String) {
+
+    
+
+    fun accept (students: MutableList<Student>) {
+
+        
+
+      var check: Boolean = true;
+
+        
+
+      for (student in students) {
+
+          if (student.id == this.id) { check = false; }
+
+      }
+
+      
+
+      if (check) {
+
+        students.add(this)
+
+        println ("Success!")
+
+      }
+
+      else println("This student exists!");
+
+    }
+
+    
+
+    fun delete(students: MutableList<Student>) {
+
+        var check: Boolean = false;
+
+        
+
+      for (student in students) {
+
+          if (student.id == this.id) { check = true; }
+
+      }
+
+      
+
+      if (check) {
+
+          students.remove(this);
+
+        println ("Success!");
+
+      }
+
+    }
+
+      
+
+}
+
+​
+
+Success!
+Success!
+This student exists!
+[Student@2c7b84de, Student@3fee733d]
+Success!
+[Student@2c7b84de]
+Target platform: JVMRunning on kotlin v.1.5.31
